@@ -32,3 +32,22 @@ para2.textContent = 'ME TOO';
 content2.appendChild(header1);
 content2.appendChild(para2);
 container.appendChild(content2);
+
+// 3 methods to create an interaction event onclick
+// method 1 in HTML
+const btn = document.querySelector('#btn');
+
+//method 2
+//btn.onclick = () => alert("Hellooo m2");
+
+//method 3
+//  btn.addEventListener('click',() => {
+//      alert('Helloooo m3!');
+//  });
+
+btn.addEventListener('click', function (e) {
+    console.log(e);
+    e.target.style.background = 'blue';
+  });
+  
+
