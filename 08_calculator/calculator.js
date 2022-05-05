@@ -10,15 +10,15 @@ const subtract = function(a, b) {
 const sum = function(arrays) {
   if (!arrays.length)
     return 0;
-  const total = arrays.reduce((pSum, arr) =>(pSum + arr),0);    
-  return total;
+  return arrays.reduce((pSum, arr) =>(pSum + arr),0);    
+  
 };
 
 const multiply = function(arrays) {
   if (!arrays.length)
     return 0;
-  const result = arrays.reduce((pProd, arr) => pProd*arr,1);
-  return result;
+  return arrays.reduce((pProd, arr) => pProd*arr,1);
+  
 };
 
 const power = function(a,b) {
@@ -37,6 +37,12 @@ const factorial = function(a) {
   }
 };
 
+// Another implementation of Factorial that uses recursion
+const recursiveF = function(n) {
+  if (n === 0) 
+    return 1;
+  return n * recursiveF (n-1);
+};
 // Do not edit below this line
 module.exports = {
   add,
@@ -44,5 +50,6 @@ module.exports = {
   sum,
   multiply,
   power,
-  factorial
+  factorial,
+  recursiveF
 };

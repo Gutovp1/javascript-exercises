@@ -75,3 +75,25 @@ describe('factorial', () => {
 		expect(calculator.factorial(10)).toBe(3628800);
 	});
 });
+
+describe('recursiveF', () => {
+	test('computes the factorial of 0', () => {
+		expect(calculator.recursiveF(0)).toBe(1); // 0! = 1
+	});
+
+	test('computes the factorial of 1', () => {
+		expect(calculator.recursiveF(1)).toBe(1);
+	});
+
+	test('computes the factorial of 2', () => {
+		expect(calculator.recursiveF(2)).toBe(2);
+	});
+
+	test('computes the factorial of 5', () => {
+		expect(calculator.recursiveF(5)).toBe(120);
+	});
+
+	test('computes the factorial of 10', () => {
+		expect(calculator.recursiveF(10)).toBe(3628800);
+	});
+});
